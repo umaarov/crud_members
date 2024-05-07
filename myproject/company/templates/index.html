@@ -1,66 +1,46 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
-  </head>
-
-  <body>
-    <nav>
-      <img src="media/images/coffee.png" alt="Logo" class="logo" />
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="right-menu">
-        <form class="search-form">
-          <input type="text" placeholder="Search..." />
-          <button type="submit">Search</button>
-        </form>
-        <div class="language-selector">
-          <a href="#">En</a> | <a href="#">Ru</a>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <nav>
+    <img src="media/images/coffee.png" alt="Logo" class="logo">
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="right-menu">
+      <form class="search-form">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+      <div class="language-selector">
+        <a href="#">En</a> | <a href="#">Ru</a>
       </div>
-    </nav>
-
-    <section>
-      <div class="container">
-        <h1>Members</h1>
-        <table id="customers" border="1">
-          <thead>
-            <th>Photo</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Position</th>
-          </thead>
-
-          {% for x in mem %}
-          <tr>
-            <td>
-              <img
-                height="70px"
-                id="profile"
-                src="{{ x.image.url }}"
-                alt="{{ x.firstname }} {{ x.lastname }}"
-              />
-            </td>
-            <td>{{ x.firstname }}</td>
-            <td>{{ x.lastname }}</td>
-            <td>{{ x.position }}</td>
-          </tr>
-          {% endfor %}
-        </table>
-      </div>
-    </section>
-
-    <div class="footer">
-      <p>&copy; 2024 Your Website</p>
     </div>
-  </body>
+  </nav>
+
+  <section class="section">
+    {% for x in mem %}
+    <div class="card">
+      <img class="img" src="{{ x.image.url }}" alt="{{ x.firstname }} {{ x.lastname }}">
+      <div class="card-content">
+        <h3>{{ x.firstname }} {{ x.lastname }}</h3>
+        <p>{{ x.position }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2024</p>
+  </div>
+</body>
 </html>

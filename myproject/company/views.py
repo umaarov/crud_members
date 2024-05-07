@@ -12,3 +12,7 @@ def index(request):
 def about(request):
     mem = Member.objects.all()
     return render(request, "about.html", {"mem": mem})
+
+def contact(request):
+    mem = Member.objects.all()
+    return render(request, "contact.html", {"mem": mem})

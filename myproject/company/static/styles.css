@@ -1,3 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu li a:hover {
+  background-color: #b39c9c3d;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  margin-right: 20px;
+}
+
+.search-form input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: black;
+}
+
+.language-selector a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.language-selector a + a {
+  margin-left: 5px;
+}
+
+.language-selector a:hover {
+  background-color: #b39c9c3d;
+}
+
 .container {
   margin: 80px 240px 60px 240px;
   padding: 0px 100px 100px 100px;
@@ -108,4 +197,15 @@ h1 {
 .img {
   width: 70px;
   height: 70px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px 0;
+  bottom: 0%;
+  height: auto;
+  width: 100%;
 }

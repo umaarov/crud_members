@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  margin: 0;
   font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 nav {
@@ -50,16 +52,21 @@ nav {
 
 .search-form {
   margin-right: 20px;
+  display: flex;
 }
 
-.search-form input[type="text"] {
+.searchinput[type="text"] {
   padding: 8px;
+  margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
 .search-form button {
   padding: 8px 15px;
+  height: 32px;
+  margin-left: 5px;
+  margin-top: 10px;
   border-radius: 5px;
   background-color: #333;
   color: #fff;
@@ -85,70 +92,56 @@ nav {
   background-color: #b39c9c3d;
 }
 
-.image-container {
-  display: inline-block;
-  border: 2px solid #333;
-  border-radius: 8px;
-  margin-top: 30px;
-  margin-left: 180px;
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-  width: 400px;
-  height: auto;
-}
-
-.about-container {
-  display: flex;
-}
-
-.text-container {
-  margin-left: 100px;
-  max-width: 500px;
-}
-
-.subtext {
-  font-size: 13px;
-  color: grey;
-  line-height: 20px;
-  font-weight: 400;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
 }
 
 h1 {
-  line-height: 40px;
-  font-size: 30px;
-}
-
-.dots {
-  font-size: 13px;
-  color: brown;
-  line-height: 20px;
-  margin-top: 20px;
-  font-weight: 400;
-}
-
-.check {
-  width: 20px;
-}
-
-.my-button {
-  background-color: purple;
-  border: none;
-  color: white;
-  padding: 10px 42px;
   text-align: center;
-  text-decoration: none;
-  font-family: "Poppins";
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
 }
 
-.my-button:hover {
-  background-color: rgb(34, 0, 34);
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 .footer {

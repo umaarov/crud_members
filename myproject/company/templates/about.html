@@ -26,28 +26,15 @@
       </div>
     </nav>
 
+    {% for x in abt %}
     <section>
       <div class="about-container">
         <div class="image-container">
-          <img src="media/images/about.jpg" alt="Example Image" />
+          <img src="{{ x.about_img.url }}" alt="about" />
         </div>
         <div class="text-container">
-          <h1>
-            Biznesingiz uchun dasturiy <br />
-            ta'minot ishlab chiqamiz
-          </h1>
-          <p class="subtext">
-            Mijozlarimizning bizni xizmatimizdan foydalanishlarini asosiy
-            sabablaridan biri BlaBla jamoasi har bir mijozga individual
-            yondashadi va talabidan kelib chiqib dasturni moslab beradi.
-            Shuningdek tajribali mutaxasislar har bir talab boʼyicha eng foydali
-            va kerakli yechimlarni mijozlarga taqdim etishadi.<br /><br />Har
-            bir biznesga tuzilgan dasturiy taʼminot oʼz ichiga olgan korxonaning
-            moliyaviy, buxgalteriya, xodimlar, sotuv, mijozlar bilan ishlash
-            boʼlimlari va boshqa qo’shimcha qurilmalar, boshqa dasturlar bilan
-            integratsiya qilish imkoniyati mavjudligi bilan boshqa dasturiy
-            taʼminotlardan ajralib turadi.
-          </p>
+          <h1>{{ x.header }}</h1>
+          <p class="subtext">{{ x.body }}</p>
           <p class="dots">
             <img class="check" src="media/images/checklist.png" alt="Check" />
             Sifatli qo'llab-quvvatlash <br />
@@ -67,6 +54,7 @@
       </div>
     </section>
 
+    {% endfor %}
     <div class="footer">
       <p>&copy; 2024</p>
     </div>

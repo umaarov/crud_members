@@ -27,8 +27,13 @@
     </div>
   </nav>
 
+
+  <h1>----- Our Team -----</h1>
+
   <section class="section">
+
     {% for x in mem %}
+
     <div class="card">
       <img class="img" src="{{ x.image.url }}" alt="{{ x.firstname }} {{ x.lastname }}">
       <div class="card-content">

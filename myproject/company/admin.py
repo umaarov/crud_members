@@ -6,6 +6,8 @@ from .models import Contact
 
 class MemberAdmin(admin.ModelAdmin):
     list_display = "image", "firstname", "lastname", "position"
+    list_editable = ("firstname", "lastname", "position", "image")
+    list_display_links = None
 
 
 class AboutAdmin(admin.ModelAdmin):
@@ -32,4 +34,3 @@ class ContactAdmin(admin.ModelAdmin):
 admin.site.register(Member, MemberAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(Contact, ContactAdmin)
-

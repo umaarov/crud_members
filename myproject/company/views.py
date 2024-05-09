@@ -22,3 +22,6 @@ def contact(request):
         message = request.POST.get("message")
         Contact.objects.create(name=name, email=email, message=message)
     return render(request, "contact.html")
+
+def redirect_to_home(request):
+    return redirect('/index.html')

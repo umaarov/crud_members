@@ -6,6 +6,7 @@ from . import views
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', views.redirect_to_home),
     path("index.html", views.index, name="index"),
     path("about.html", views.about, name="about"),
     path("contact.html", views.contact, name="contact"),
